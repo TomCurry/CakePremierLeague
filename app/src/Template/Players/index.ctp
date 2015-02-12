@@ -6,13 +6,13 @@
         <li><?= $this->Html->link(__('New Club'), ['controller' => 'Clubs', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Teams'), ['controller' => 'Teams', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Team'), ['controller' => 'Teams', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Player Search'), ['controller' => 'Players', 'action' => 'search']) ?> </li>
     </ul>
 </div>
 <div class="players index large-10 medium-9 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('first_name') ?></th>
             <th><?= $this->Paginator->sort('last_name') ?></th>
             <th><?= $this->Paginator->sort('birth') ?></th>
@@ -25,10 +25,9 @@
     <tbody>
     <?php foreach ($players as $player): ?>
         <tr>
-            <td><?= $this->Number->format($player->id) ?></td>
             <td><?= h($player->first_name) ?></td>
             <td><?= h($player->last_name) ?></td>
-            <td><?= h($player->birth) ?></td>
+            <td><?= h($player->birth->format('d/M/Y')) ?></td>
             <td><?= h($player->country) ?></td>
             <td><?= h($player->position) ?></td>
             <td><?= $this->Number->format($player->squad_number) ?></td>

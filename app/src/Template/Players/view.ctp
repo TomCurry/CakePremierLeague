@@ -27,8 +27,7 @@
             <p><?= $player->has('club') ? $this->Html->link($player->club->id, ['controller' => 'Clubs', 'action' => 'view', $player->club->id]) : '' ?></p>
         </div>
         <div class="large-2 columns numbers end">
-            <h6 class="subheader"><?= __('Id') ?></h6>
-            <p><?= $this->Number->format($player->id) ?></p>
+            
             <h6 class="subheader"><?= __('Squad Number') ?></h6>
             <p><?= $this->Number->format($player->squad_number) ?></p>
         </div>

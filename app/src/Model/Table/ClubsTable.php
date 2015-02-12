@@ -22,7 +22,7 @@ class ClubsTable extends Table
     public function initialize(array $config)
     {
         $this->table('clubs');
-        $this->displayField('id');
+        $this->displayField('full_name');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
         $this->belongsTo('Managers', [

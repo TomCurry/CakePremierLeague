@@ -25,4 +25,9 @@ class Player extends Entity
         'club' => true,
         'teams' => true,
     ];
+    
+    protected function _getFullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
 }

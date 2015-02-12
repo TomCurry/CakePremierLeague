@@ -58,8 +58,8 @@ class PlayersController extends AppController
                 $this->Flash->error('The player could not be saved. Please, try again.');
             }
         }
-        $clubs = $this->Players->Clubs->find('list', ['limit' => 200]);
-        $teams = $this->Players->Teams->find('list', ['limit' => 200]);
+        $clubs = $this->Players->Clubs->find('list');
+        $teams = $this->Players->Teams->find('list');
         $this->set(compact('player', 'clubs', 'teams'));
         $this->set('_serialize', ['player']);
     }
@@ -109,4 +109,24 @@ class PlayersController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function search() {
+        if ($this->request->is('post')) {
+            
+            $where = ['club_id' => $this->request->data('club_id')];
+            
+            if (!empty($this->request->data('position'))) {
+                $where = array_merge($where, ['position IN' => $this->request->data('position')]);
+            }
+            
+            $players = $this->Players->find()
+                ->where($where);
+
+            $this->set('players', $players);
+        }
+        
+        $clubs = $this->Players->Clubs->find('list');
+        $this->set('clubs', $clubs);
+        
+  }
 }

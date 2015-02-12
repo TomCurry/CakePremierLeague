@@ -53,7 +53,7 @@ class PlayersTable extends Table
             ->notEmpty('first_name')
             ->requirePresence('last_name', 'create')
             ->notEmpty('last_name')
-            ->add('birth', 'valid', ['rule' => 'datetime'])
+            ->add('birth', 'valid', ['rule' => 'date'])
             ->requirePresence('birth', 'create')
             ->notEmpty('birth')
             ->requirePresence('country', 'create')
@@ -81,5 +81,9 @@ class PlayersTable extends Table
     {
         $rules->add($rules->existsIn(['club_id'], 'Clubs'));
         return $rules;
+    }
+    
+    public function findClubs(Query $query, array $options) {
+        
     }
 }
