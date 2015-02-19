@@ -17,4 +17,9 @@ $(function(){
        }, 'json');
     });
     
+    $('#players-ids').change(function () {
+        var x = $("#players-ids option:selected").length;
+        $("p").text("Please select 18 players. You have selected " + x + ".");
+})
+        .trigger("change");
 })

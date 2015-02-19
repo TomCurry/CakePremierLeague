@@ -27,9 +27,6 @@ class TeamsTable extends Table
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id'
         ]);
-        $this->belongsTo('Players', [
-            'foreignKey' => 'player_id'
-        ]);
         $this->belongsToMany('Matches', [
             'foreignKey' => 'team_id',
             'targetForeignKey' => 'match_id',
@@ -56,9 +53,7 @@ class TeamsTable extends Table
             ->add('club_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('club_id', 'create')
             ->notEmpty('club_id')
-            ->add('player_id', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('player_id', 'create')
-            ->notEmpty('player_id');
+            ->add('player_id', 'valid', ['rule' => 'numeric']);
 
         return $validator;
     }

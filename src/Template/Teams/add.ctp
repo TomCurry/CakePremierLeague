@@ -16,7 +16,8 @@
         <legend><?= __('Add Team') ?></legend>
         <?php
             echo $this->Form->input('club_id', ['options' => $clubs, 'empty' => 'Select club']);
-            echo $this->Form->input('players._ids', ['options' => false]);
+            echo $this->Form->input('players._ids', ['options' => false, 'type' => 'select', 'multiple' => true]);
+            echo $this->Html->para('team_id', 'Please select 18 players', []);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

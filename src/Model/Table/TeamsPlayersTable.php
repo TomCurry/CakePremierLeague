@@ -22,6 +22,7 @@ class TeamsPlayersTable extends Table
     public function initialize(array $config)
     {
         $this->table('teams_players');
+        $this->primaryKey('id');
         $this->belongsTo('Teams', [
             'foreignKey' => 'team_id'
         ]);
