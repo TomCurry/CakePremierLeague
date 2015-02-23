@@ -22,7 +22,7 @@ class TeamsTable extends Table
     public function initialize(array $config)
     {
         $this->table('teams');
-        $this->displayField('id');
+        $this->displayField('name');
         $this->primaryKey('id');
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id'
@@ -53,7 +53,16 @@ class TeamsTable extends Table
             ->add('club_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('club_id', 'create')
             ->notEmpty('club_id')
-            ->add('player_id', 'valid', ['rule' => 'numeric']);
+            ->requirePresence('name')
+            ->notEmpty('name')
+            ->add('players', 'custom', [
+                'rule' => function($value) {
+                    var_dump($value);
+                    exit;
+                    return (bool)(is_array($value['_ids']) && count($value['_ids']) === 18);
+                },
+                'message' => 'Please select 18 players.'
+            ]);
 
         return $validator;
     }

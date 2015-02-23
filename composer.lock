@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "fad068d84552c95bd1079dd825f6953ff2293f82"
+                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/fad068d84552c95bd1079dd825f6953ff2293f82",
-                "reference": "fad068d84552c95bd1079dd825f6953ff2293f82",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/cbb2d345477652efd6043a510dd3107a2b6b72b6",
+                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-02-17 01:00:44"
+            "time": "2015-02-17 15:26:01"
         },
         {
             "name": "cakephp/migrations",

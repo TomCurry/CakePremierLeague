@@ -50,6 +50,7 @@ class TeamsController extends AppController
     {
         $team = $this->Teams->newEntity();
         if ($this->request->is('post')) {
+
             $team = $this->Teams->patchEntity($team, $this->request->data(), ['associated' => [
                 'Players'
             ]]);
@@ -63,10 +64,9 @@ class TeamsController extends AppController
                 $this->Flash->error('The team could not be saved. Please, try again.');
             }
         }
-        $clubs = $this->Teams->Clubs->find('list', ['limit' => 200]);
-        $players = $this->Teams->Players->find('list', ['limit' => 200]);
-        $matches = $this->Teams->Matches->find('list', ['limit' => 200]);
-        $this->set(compact('team', 'clubs', 'players', 'matches'));
+        $clubs = $this->Teams->Clubs->find('list');
+        $matches = $this->Teams->Matches->find('list');
+        $this->set(compact('team', 'clubs', 'matches'));
         $this->set('_serialize', ['team']);
     }
 

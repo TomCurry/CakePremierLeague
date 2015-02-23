@@ -4,30 +4,28 @@
         <li><?= $this->Html->link(__('New Team'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Clubs'), ['controller' => 'Clubs', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Club'), ['controller' => 'Clubs', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Players'), ['controller' => 'Players', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Player'), ['controller' => 'Players', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Matches'), ['controller' => 'Matches', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Match'), ['controller' => 'Matches', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Players'), ['controller' => 'Players', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Player'), ['controller' => 'Players', 'action' => 'add']) ?> </li>
     </ul>
 </div>
 <div class="teams index large-10 medium-9 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('club_id') ?></th>
-            <th><?= $this->Paginator->sort('player_id') ?></th>
+            <th><?= $this->Paginator->sort('name') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
     <tbody>
     <?php foreach ($teams as $team): ?>
         <tr>
-            <td><?= $this->Number->format($team->id) ?></td>
             <td>
-                <?= $team->has('club') ? $this->Html->link($team->club->id, ['controller' => 'Clubs', 'action' => 'view', $team->club->id]) : '' ?>
+                <?= $team->has('club') ? $this->Html->link($team->club->full_name, ['controller' => 'Clubs', 'action' => 'view', $team->club->id]) : '' ?>
             </td>
-            <td><?= $this->Number->format($team->player_id) ?></td>
+            <td><?= h($team->name) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $team->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $team->id]) ?>

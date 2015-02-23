@@ -20,5 +20,6 @@ class Team extends Entity
         'club' => true,
         'players' => true,
         'matches' => true,
+        'name' => true
     ];
 }
