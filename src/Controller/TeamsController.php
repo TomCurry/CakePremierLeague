@@ -60,7 +60,7 @@ class TeamsController extends AppController
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error('The team could not be saved. Please, try again.');
-            }
+            } 
         }
         $clubs = $this->Teams->Clubs->find('list');
         $matches = $this->Teams->Matches->find('list');
