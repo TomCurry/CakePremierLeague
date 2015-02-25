@@ -19,7 +19,7 @@ class MatchesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Stadia', 'Matchdays']
+            'contain' => ['Stadia', 'Matchdays', 'HomeTeam', 'AwayTeam']
         ];
         $this->set('matches', $this->paginate($this->Matches));
         $this->set('_serialize', ['matches']);

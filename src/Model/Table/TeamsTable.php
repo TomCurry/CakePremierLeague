@@ -57,8 +57,6 @@ class TeamsTable extends Table
             ->notEmpty('name')
             ->add('players', 'custom', [
                 'rule' => function($value) {
-                    var_dump($value);
-                    exit;
                     return (bool)(is_array($value['_ids']) && count($value['_ids']) === 18);
                 },
                 'message' => 'Please select 18 players.'

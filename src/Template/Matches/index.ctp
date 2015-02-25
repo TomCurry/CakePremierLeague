@@ -16,9 +16,8 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
-            <th><?= $this->Paginator->sort('home_team') ?></th>
-            <th><?= $this->Paginator->sort('away_team') ?></th>
+            <th><?= $this->Paginator->sort('home_team_id') ?></th>
+            <th><?= $this->Paginator->sort('away_team_id') ?></th>
             <th><?= $this->Paginator->sort('stadium_id') ?></th>
             <th><?= $this->Paginator->sort('matchday_id') ?></th>
             <th><?= $this->Paginator->sort('created') ?></th>
@@ -29,9 +28,8 @@
     <tbody>
     <?php foreach ($matches as $match): ?>
         <tr>
-            <td><?= $this->Number->format($match->id) ?></td>
-            <td><?= $this->Number->format($match->home_team) ?></td>
-            <td><?= $this->Number->format($match->away_team) ?></td>
+            <td><?= $this->Number->format($match->home_team_id) ?></td>
+            <td><?= $this->Number->format($match->away_team_id) ?></td>
             <td>
                 <?= $match->has('stadia') ? $this->Html->link($match->stadia->name, ['controller' => 'Stadia', 'action' => 'view', $match->stadia->id]) : '' ?>
             </td>

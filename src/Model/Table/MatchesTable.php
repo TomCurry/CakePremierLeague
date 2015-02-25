@@ -42,10 +42,12 @@ class MatchesTable extends Table
         $this->belongsToMany('HomeTeam', [
             'foreignKey' => 'home_team_id',
             'className' => 'App\Model\Table\TeamsTable',
+            'joinTable' => 'matches_teams'
         ]); 
         $this->belongsToMany('AwayTeam', [
             'foreignKey' => 'away_team_id',
             'className' => 'App\Model\Table\TeamsTable',
+            'joinTable' => 'matches_teams'
         ]); 
    }
 
@@ -60,12 +62,12 @@ class MatchesTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
-            ->add('home_team', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('home_team', 'create')
-            ->notEmpty('home_team')
-            ->add('away_team', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('away_team', 'create')
-            ->notEmpty('away_team')
+            ->add('home_team_id', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('home_team_id', 'create')
+            ->notEmpty('home_team_id_id')
+            ->add('away_team_id', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('away_team_id', 'create')
+            ->notEmpty('away_team_id')
             ->add('stadium_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('stadium_id', 'create')
             ->notEmpty('stadium_id')

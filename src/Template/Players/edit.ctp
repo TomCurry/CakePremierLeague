@@ -30,7 +30,6 @@
             echo $this->Form->input('position');
             echo $this->Form->input('squad_number');
             echo $this->Form->input('club_id', ['options' => $clubs]);
-            echo $this->Form->input('teams._ids', ['options' => $teams]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

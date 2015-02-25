@@ -17,6 +17,8 @@ class MatchesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'Matches' => 'app.matches',
+        'HomeTeams' => 'app.home_teams',
+        'AwayTeams' => 'app.away_teams',
         'Stadia' => 'app.stadia',
         'Matchdays' => 'app.matchdays',
         'Results' => 'app.results',

@@ -15,8 +15,8 @@ class Match extends Entity
      * @var array
      */
     protected $_accessible = [
-        'home_team' => true,
-        'away_team' => true,
+        'home_team_id' => true,
+        'away_team_id' => true,
         'stadium_id' => true,
         'matchday_id' => true,
         'stadia' => true,
@@ -24,4 +24,6 @@ class Match extends Entity
         'results' => true,
         'teams' => true,
     ];
+
+    
 }

@@ -18,10 +18,18 @@ class MatchesTableTest extends TestCase
      */
     public $fixtures = [
         'Matches' => 'app.matches',
+        'HomeTeams' => 'app.home_teams',
+        'AwayTeams' => 'app.away_teams',
         'Stadia' => 'app.stadia',
         'Matchdays' => 'app.matchdays',
         'Results' => 'app.results',
         'Teams' => 'app.teams',
+        'Clubs' => 'app.clubs',
+        'Managers' => 'app.managers',
+        'Players' => 'app.players',
+        'TeamsPlayers' => 'app.teams_players',
+        'Rankings' => 'app.rankings',
+        'Leagues' => 'app.leagues',
         'MatchesTeams' => 'app.matches_teams'
     ];
 

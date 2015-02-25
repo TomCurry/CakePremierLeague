@@ -51,8 +51,6 @@ class PlayersTable extends Table
             ->allowEmpty('id', 'create')
             ->requirePresence('first_name', 'create')
             ->notEmpty('first_name')
-            ->requirePresence('last_name', 'create')
-            ->notEmpty('last_name')
             ->add('birth', 'valid', ['rule' => 'date'])
             ->requirePresence('birth', 'create')
             ->notEmpty('birth')

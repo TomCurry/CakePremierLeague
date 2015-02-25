@@ -22,4 +22,5 @@ class Team extends Entity
         'matches' => true,
         'name' => true
     ];
+    
 }

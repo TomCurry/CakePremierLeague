@@ -21,9 +21,10 @@
     <fieldset>
         <legend><?= __('Edit Team') ?></legend>
         <?php
-            echo $this->Form->input('club_id', ['options' => $clubs]);
-            echo $this->Form->input('matches._ids', ['options' => $matches]);
-            echo $this->Form->input('players._ids', ['options' => $players]);
+            echo $this->Form->input('club_id', ['options' => $clubs, 'empty' => 'Select club']);
+            echo $this->Form->input('name');
+            echo $this->Form->input('players._ids', ['options' => false, 'type' => 'select', 'multiple' => true]);
+            echo $this->Html->para('team_id', 'Please select 18 players', []);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
