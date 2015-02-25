@@ -19,6 +19,9 @@
             echo $this->Form->input('name');
             echo $this->Form->input('players._ids', ['options' => false, 'type' => 'select', 'multiple' => true]);
             echo $this->Html->para('team_id', 'Please select 18 players', []);
+            if ($this->Form->isFieldError('players')):
+                echo $this->Form->error('players');
+            endif;
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

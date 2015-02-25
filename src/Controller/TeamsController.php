@@ -50,11 +50,9 @@ class TeamsController extends AppController
     {
         $team = $this->Teams->newEntity();
         if ($this->request->is('post')) {
-
             $team = $this->Teams->patchEntity($team, $this->request->data(), ['associated' => [
                 'Players'
             ]]);
-            $team->dirty('players', true);
             if ($this->Teams->save($team, ['associated' => [
                 'Players'
             ]])) {
@@ -67,7 +65,6 @@ class TeamsController extends AppController
         $clubs = $this->Teams->Clubs->find('list');
         $matches = $this->Teams->Matches->find('list');
         $this->set(compact('team', 'clubs', 'matches'));
-        $this->set('_serialize', ['team']);
     }
 
     /**
