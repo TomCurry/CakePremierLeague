@@ -12,6 +12,7 @@
         <legend><?= __('Add League') ?></legend>
         <?php
             echo $this->Form->input('name');
+            echo $this->Form->input('year');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

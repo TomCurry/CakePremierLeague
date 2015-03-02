@@ -89,7 +89,7 @@
             <td><?= h($players->id) ?></td>
             <td><?= h($players->first_name) ?></td>
             <td><?= h($players->last_name) ?></td>
-            <td><?= h($players->birth) ?></td>
+            <td><?= h($players->birth->format('d/M/Y')) ?></td>
             <td><?= h($players->country) ?></td>
             <td><?= h($players->position) ?></td>
             <td><?= h($players->squad_number) ?></td>
