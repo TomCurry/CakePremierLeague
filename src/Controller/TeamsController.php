@@ -35,7 +35,26 @@ class TeamsController extends AppController
     public function view($id = null)
     {
         $team = $this->Teams->get($id, [
-            'contain' => ['Clubs', 'Players', 'Matches']
+            'contain' => [
+                'Clubs',
+                'Players',
+                'HomeMatches' => [
+                    'HomeTeams' => [
+                        'fields' => ['id', 'name']
+                    ],
+                    'AwayTeams' => [
+                        'fields' => ['id', 'name']
+                    ],
+                ],
+                'AwayMatches' => [
+                    'HomeTeams' => [
+                        'fields' => ['id', 'name']
+                    ],
+                    'AwayTeams' => [
+                        'fields' => ['id', 'name']
+                    ],
+                ]
+            ]
         ]);
         $this->set('team', $team);
         $this->set('_serialize', ['team']);
