@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6"
+                "reference": "c644474f9965f020483f489b90643c4266c3f83b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/cbb2d345477652efd6043a510dd3107a2b6b72b6",
-                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/c644474f9965f020483f489b90643c4266c3f83b",
+                "reference": "c644474f9965f020483f489b90643c4266c3f83b",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-02-17 15:26:01"
+            "time": "2015-03-11 01:35:27"
         },
         {
             "name": "cakephp/migrations",
@@ -199,12 +199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/migrations.git",
-                "reference": "70cb70b71c7499bb6c90b5af11fb43a357e14376"
+                "reference": "0af679cc7ff292b9a517d634f76739855a55ba65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/migrations/zipball/70cb70b71c7499bb6c90b5af11fb43a357e14376",
-                "reference": "70cb70b71c7499bb6c90b5af11fb43a357e14376",
+                "url": "https://api.github.com/repos/cakephp/migrations/zipball/0af679cc7ff292b9a517d634f76739855a55ba65",
+                "reference": "0af679cc7ff292b9a517d634f76739855a55ba65",
                 "shasum": ""
             },
             "require": {
@@ -220,9 +220,6 @@
                 "cakephp/bake": "Required if you want to generate migrations."
             },
             "type": "cakephp-plugin",
-            "extra": {
-                "installer-name": "Migrations"
-            },
             "autoload": {
                 "psr-4": {
                     "Migrations\\": "src"
@@ -244,7 +241,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2015-02-10 02:53:17"
+            "time": "2015-03-06 08:03:16"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -440,22 +437,23 @@
         },
         {
             "name": "mobiledetect/mobiledetectlib",
-            "version": "2.8.11",
+            "version": "2.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/serbanghita/Mobile-Detect.git",
-                "reference": "c68901fb09227dcf04872f0d6a27b9f6e75ecf1f"
+                "reference": "af30b5b7bd683f575b1c56f74e0e0632f5dd9fc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/c68901fb09227dcf04872f0d6a27b9f6e75ecf1f",
-                "reference": "c68901fb09227dcf04872f0d6a27b9f6e75ecf1f",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/af30b5b7bd683f575b1c56f74e0e0632f5dd9fc9",
+                "reference": "af30b5b7bd683f575b1c56f74e0e0632f5dd9fc9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.0.0"
             },
             "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
                 "johnkary/phpunit-speedtrap": "~1.0@dev",
                 "phpunit/phpunit": "*"
             },
@@ -489,7 +487,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2014-11-23 13:08:17"
+            "time": "2015-03-11 10:02:22"
         },
         {
             "name": "nesbot/carbon",
@@ -577,16 +575,16 @@
         },
         {
             "name": "robmorgan/phinx",
-            "version": "v0.4.2.1",
+            "version": "v0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robmorgan/phinx.git",
-                "reference": "1bc1396392d4073b8b29ee5289e445889cbc12b5"
+                "reference": "0d1f9cb9939f65f506a8a3f5fee356764c310fd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/1bc1396392d4073b8b29ee5289e445889cbc12b5",
-                "reference": "1bc1396392d4073b8b29ee5289e445889cbc12b5",
+                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/0d1f9cb9939f65f506a8a3f5fee356764c310fd4",
+                "reference": "0d1f9cb9939f65f506a8a3f5fee356764c310fd4",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +633,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2015-02-08 03:41:44"
+            "time": "2015-02-23 16:38:12"
         },
         {
             "name": "symfony/config",
@@ -844,12 +842,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "82e5c4315091a89ab4494122a60896d47be50043"
+                "reference": "0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/82e5c4315091a89ab4494122a60896d47be50043",
-                "reference": "82e5c4315091a89ab4494122a60896d47be50043",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933",
+                "reference": "0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933",
                 "shasum": ""
             },
             "require": {
@@ -882,7 +880,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-02-14 21:00:18"
+            "time": "2015-03-05 06:45:14"
         },
         {
             "name": "cakephp/debug_kit",
@@ -890,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "64a1033ccd1fc0f914a08ff083e690c72d30d3d6"
+                "reference": "1ff614286eb9d9c4c6066e76add0987ec22ca563"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/64a1033ccd1fc0f914a08ff083e690c72d30d3d6",
-                "reference": "64a1033ccd1fc0f914a08ff083e690c72d30d3d6",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/1ff614286eb9d9c4c6066e76add0987ec22ca563",
+                "reference": "1ff614286eb9d9c4c6066e76add0987ec22ca563",
                 "shasum": ""
             },
             "require": {
@@ -939,29 +937,27 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-02-06 03:43:37"
+            "time": "2015-03-03 02:05:09"
         },
         {
             "name": "d11wtq/boris",
-            "version": "v1.0.8",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/d11wtq/boris.git",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
+                "url": "https://github.com/borisrepl/boris.git",
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/d11wtq/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
+                "url": "https://api.github.com/repos/borisrepl/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
-            },
-            "suggest": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "ext-readline": "*"
+                "ext-readline": "*",
+                "php": ">=5.3.0"
             },
             "bin": [
                 "bin/boris"
@@ -973,7 +969,11 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-01-17 12:21:18"
+            "license": [
+                "MIT"
+            ],
+            "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
+            "time": "2015-03-01 08:05:19"
         }
     ],
     "aliases": [],
