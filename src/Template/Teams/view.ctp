@@ -24,46 +24,23 @@
             <h6 class="subheader"><?= __('Id') ?></h6>
             <p><?= $this->Number->format($team->id) ?></p>
         </div>
+        <div class="large-2 columns dates end">
+            <h6 class="subheader"><?= __('Name') ?></h6>
+            <p><?=  h($team->name) ?></p>
+        </div>
     </div>
+    
 </div>
 <div class="related row">
     <div class="column large-12">
-    <h4 class="subheader"><?= __('Related Matches') ?></h4>
-    <?php if (!empty($team->matches)): ?>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th><?= __('Id') ?></th>
-            <th><?= __('Home Team Id') ?></th>
-            <th><?= __('Away Team Id') ?></th>
-            <th><?= __('Stadium Id') ?></th>
-            <th><?= __('Matchday Id') ?></th>
-            <th><?= __('Created') ?></th>
-            <th><?= __('Updated') ?></th>
-            <th class="actions"><?= __('Actions') ?></th>
-        </tr>
-        <?php foreach ($team->matches as $matches): ?>
-        <tr>
-            <td><?= h($matches->id) ?></td>
-            <td><?= h($matches->home_team_id) ?></td>
-            <td><?= h($matches->away_team_id) ?></td>
-            <td><?= h($matches->stadium_id) ?></td>
-            <td><?= h($matches->matchday_id) ?></td>
-            <td><?= h($matches->created) ?></td>
-            <td><?= h($matches->updated) ?></td>
-
-            <td class="actions">
-                <?= $this->Html->link(__('View'), ['controller' => 'Matches', 'action' => 'view', $matches->id]) ?>
-
-                <?= $this->Html->link(__('Edit'), ['controller' => 'Matches', 'action' => 'edit', $matches->id]) ?>
-
-                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Matches', 'action' => 'delete', $matches->id], ['confirm' => __('Are you sure you want to delete # {0}?', $matches->id)]) ?>
-
-            </td>
-        </tr>
-
-        <?php endforeach; ?>
-    </table>
-    <?php endif; ?>
+    <h4 class="subheader"><?= __('Related Home Matches') ?></h4>
+        <?=  $this->element('table', [
+            'matches' => $team->home_matches
+        ]); ?>
+    <h4 class="subheader"><?= __('Related Away Matches') ?></h4>
+        <?=  $this->element('table', [
+            'matches' => $team->away_matches
+        ]); ?>
     </div>
 </div>
 <div class="related row">
@@ -89,7 +66,7 @@
             <td><?= h($players->id) ?></td>
             <td><?= h($players->first_name) ?></td>
             <td><?= h($players->last_name) ?></td>
-            <td><?= h($players->birth) ?></td>
+            <td><?= h($players->birth->format('d/M/Y')) ?></td>
             <td><?= h($players->country) ?></td>
             <td><?= h($players->position) ?></td>
             <td><?= h($players->squad_number) ?></td>
