@@ -43,22 +43,20 @@ class MatchesController extends AppController
             'contain' => [
                 'Stadia',
                 'Matchdays',
-                'Teams',
-                'Results',
                 'HomeTeams' => [
                     'HomeMatches' => [
-                        'fields' => ['id', 'name']
+                        'fields' => ['home_team_id']
                     ],
                     'AwayMatches' => [
-                        'fields' => ['id', 'name']
+                        'fields' => ['away_team_id']
                     ],
                 ],
                 'AwayTeams' => [
                     'HomeMatches' => [
-                        'fields' => ['id', 'name']
+                        'fields' => ['home_team_id']
                     ],
                     'AwayMatches' => [
-                        'fields' => ['id', 'name']
+                        'fields' => ['away_team_id']
                     ],
                 ]
             ]
