@@ -37,7 +37,7 @@ class MatchesTable extends Table
         $this->belongsTo('HomeTeams', [
             'foreignKey' => 'home_team_id',
             'className' => 'App\Model\Table\TeamsTable'
-        ]);
+        ]); 
         $this->belongsTo('AwayTeams', [
             'foreignKey' => 'away_team_id',
             'className' => 'App\Model\Table\TeamsTable'
