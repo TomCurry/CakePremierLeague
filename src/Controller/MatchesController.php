@@ -19,7 +19,12 @@ class MatchesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Stadia', 'Matchdays', 'HomeTeam', 'AwayTeam']
+            'contain' => [
+                'Stadia',
+                'Matchdays',
+                'HomeTeams',
+                'AwayTeams'
+            ]
         ];
         $this->set('matches', $this->paginate($this->Matches));
         $this->set('_serialize', ['matches']);
@@ -35,7 +40,28 @@ class MatchesController extends AppController
     public function view($id = null)
     {
         $match = $this->Matches->get($id, [
-            'contain' => ['Stadia', 'Matchdays', 'Teams', 'Results']
+            'contain' => [
+                'Stadia',
+                'Matchdays',
+                'Teams',
+                'Results',
+                'HomeTeams' => [
+                    'HomeMatches' => [
+                        'fields' => ['id', 'name']
+                    ],
+                    'AwayMatches' => [
+                        'fields' => ['id', 'name']
+                    ],
+                ],
+                'AwayTeams' => [
+                    'HomeMatches' => [
+                        'fields' => ['id', 'name']
+                    ],
+                    'AwayMatches' => [
+                        'fields' => ['id', 'name']
+                    ],
+                ]
+            ]
         ]);
         $this->set('match', $match);
         $this->set('_serialize', ['match']);

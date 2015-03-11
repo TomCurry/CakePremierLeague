@@ -42,7 +42,9 @@ class LeaguesTable extends Table
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
             ->requirePresence('name', 'create')
-            ->notEmpty('name');
+            ->notEmpty('name')
+            ->requirePresence('year', 'create')
+            ->notEmpty('year');
 
         return $validator;
     }

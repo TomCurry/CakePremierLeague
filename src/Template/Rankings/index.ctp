@@ -12,6 +12,7 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
+            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('league_id') ?></th>
             <th><?= $this->Paginator->sort('club_id') ?></th>
             <th><?= $this->Paginator->sort('played') ?></th>
@@ -24,6 +25,7 @@
     <tbody>
     <?php foreach ($rankings as $ranking): ?>
         <tr>
+            <td><?= $this->Number->format($ranking->id) ?></td>
             <td>
                 <?= $ranking->has('league') ? $this->Html->link($ranking->league->name, ['controller' => 'Leagues', 'action' => 'view', $ranking->league->id]) : '' ?>
             </td>

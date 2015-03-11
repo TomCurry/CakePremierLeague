@@ -35,26 +35,7 @@ class TeamsController extends AppController
     public function view($id = null)
     {
         $team = $this->Teams->get($id, [
-            'contain' => [
-                'Clubs',
-                'Players',
-                'HomeMatches' => [
-                    'HomeTeams' => [
-                        'fields' => ['id', 'name']
-                    ],
-                    'AwayTeams' => [
-                        'fields' => ['id', 'name']
-                    ],
-                ],
-                'AwayMatches' => [
-                    'HomeTeams' => [
-                        'fields' => ['id', 'name']
-                    ],
-                    'AwayTeams' => [
-                        'fields' => ['id', 'name']
-                    ],
-                ]
-            ]
+            'contain' => ['Clubs', 'Players', 'Matches']
         ]);
         $this->set('team', $team);
         $this->set('_serialize', ['team']);
@@ -79,9 +60,9 @@ class TeamsController extends AppController
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error('The team could not be saved. Please, try again.');
-            } 
+            }
         }
-        $clubs = $this->Teams->Clubs->find('list');
+        $clubs = $this->Teams->Clubs->find('list'); 
         $matches = $this->Teams->Matches->find('list');
         $this->set(compact('team', 'clubs', 'matches'));
     }

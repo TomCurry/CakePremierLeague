@@ -10,8 +10,8 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
+            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('name') ?></th>
-            <th><?= $this->Paginator->sort('year') ?></th>
             <th><?= $this->Paginator->sort('created') ?></th>
             <th><?= $this->Paginator->sort('updated') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
@@ -20,8 +20,8 @@
     <tbody>
     <?php foreach ($leagues as $league): ?>
         <tr>
+            <td><?= $this->Number->format($league->id) ?></td>
             <td><?= h($league->name) ?></td>
-            <td><?= h($league->year) ?></td>
             <td><?= h($league->created) ?></td>
             <td><?= h($league->updated) ?></td>
             <td class="actions">

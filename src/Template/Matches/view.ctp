@@ -28,9 +28,9 @@
             <h6 class="subheader"><?= __('Id') ?></h6>
             <p><?= $this->Number->format($match->id) ?></p>
             <h6 class="subheader"><?= __('Home Team') ?></h6>
-            <p><?= $this->Number->format($match->home_team) ?></p>
+            <p><?= $this->Number->format($match->home_team_id) ?></p>
             <h6 class="subheader"><?= __('Away Team') ?></h6>
-            <p><?= $this->Number->format($match->away_team) ?></p>
+            <p><?= $this->Number->format($match->away_team_id) ?></p>
         </div>
         <div class="large-2 columns dates end">
             <h6 class="subheader"><?= __('Created') ?></h6>

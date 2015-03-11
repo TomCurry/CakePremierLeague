@@ -28,8 +28,8 @@
     <tbody>
     <?php foreach ($matches as $match): ?>
         <tr>
-            <td><?= $this->Number->format($match->home_team_id) ?></td>
-            <td><?= $this->Number->format($match->away_team_id) ?></td>
+            <td><?= $match->has('home_team') ? $this->Html->link($match->home_team->name, ['controller' => 'Teams', 'action' => 'view', $match->home_team_id]) : ''?></td>
+            <td><?= $match->has('away_team') ? $this->Html->link($match->away_team->name, ['controller' => 'Teams', 'action' => 'view', $match->away_team_id]) : ''?></td>
             <td>
                 <?= $match->has('stadia') ? $this->Html->link($match->stadia->name, ['controller' => 'Stadia', 'action' => 'view', $match->stadia->id]) : '' ?>
             </td>

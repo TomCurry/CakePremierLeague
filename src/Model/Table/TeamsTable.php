@@ -27,15 +27,18 @@ class TeamsTable extends Table
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id'
         ]);
-        $this->belongsToMany('Matches', [
-            'foreignKey' => 'team_id',
-            'targetForeignKey' => 'match_id',
-            'joinTable' => 'matches_teams'
-        ]);
         $this->belongsToMany('Players', [
-            'foreignKey' => 'team_id',
+            'foreignKey' => 'team_id',  
             'targetForeignKey' => 'player_id',
             'joinTable' => 'teams_players'
+        ]);
+        $this->hasMany('HomeMatches', [
+            'foreignKey' => 'home_team_id',
+            'className' => 'App\Model\Table\MatchesTable'
+        ]);
+        $this->hasMany('AwayMatches', [
+            'foreignKey' => 'away_team_id', 
+            'className' => 'App\Model\Table\MatchesTable'
         ]);
     }
 

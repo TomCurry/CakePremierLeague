@@ -31,27 +31,20 @@ class MatchesTable extends Table
         $this->belongsTo('Matchdays', [
             'foreignKey' => 'matchday_id'
         ]);
-        $this->hasMany('Results', [
-            'foreignKey' => 'match_id'
+        $this->belongsTo('Results', [
+            'foreignKey' => 'result_id'
         ]);
-        $this->belongsToMany('Teams', [
-            'foreignKey' => 'match_id',
-            'targetForeignKey' => 'team_id',
-            'joinTable' => 'matches_teams'
-        ]);
-        $this->belongsToMany('HomeTeam', [
+        $this->belongsTo('HomeTeams', [
             'foreignKey' => 'home_team_id',
-            'className' => 'App\Model\Table\TeamsTable',
-            'joinTable' => 'matches_teams'
-        ]); 
-        $this->belongsToMany('AwayTeam', [
+            'className' => 'App\Model\Table\TeamsTable'
+        ]);
+        $this->belongsTo('AwayTeams', [
             'foreignKey' => 'away_team_id',
-            'className' => 'App\Model\Table\TeamsTable',
-            'joinTable' => 'matches_teams'
-        ]); 
+            'className' => 'App\Model\Table\TeamsTable'
+        ]);
    }
-
-    /**
+ 
+   /**
      * Default validation rules.
      *
      * @param \Cake\Validation\Validator $validator Validator instance.
@@ -64,12 +57,12 @@ class MatchesTable extends Table
             ->allowEmpty('id', 'create')
             ->add('home_team_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('home_team_id', 'create')
-            ->notEmpty('home_team_id_id')
+            ->notEmpty('home_team_id')
             ->add('away_team_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('away_team_id', 'create')
             ->notEmpty('away_team_id')
             ->add('stadium_id', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('stadium_id', 'create')
+             ->requirePresence('stadium_id', 'create')
             ->notEmpty('stadium_id')
             ->add('matchday_id', 'valid', ['rule' => 'numeric'])
             ->requirePresence('matchday_id', 'create')
@@ -80,7 +73,7 @@ class MatchesTable extends Table
 
     /**
      * Returns a rules checker object that will be used for validating
-     * application integrity.
+     * application integrity.-----
      *
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker

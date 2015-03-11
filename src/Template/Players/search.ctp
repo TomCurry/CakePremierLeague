@@ -24,6 +24,7 @@
     </fieldset>
     <?= $this->Form->end() ?>
 <div class="players index large-10 medium-9 columns">
+    <?php if (!empty($players)) { ?>
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
@@ -35,8 +36,7 @@
             <th><?= ('Squad Number') ?></th>
         </tr>
     </thead>
-        <?php if (!empty($players)) {
-            foreach ($players as $player): ?>   
+    <?php foreach ($players as $player): ?>   
         <tr> 
             <td><?= h($player->first_name) ?></td>
             <td><?= h($player->last_name) ?></td>
@@ -49,7 +49,7 @@
         else {
             echo "<p>No players found. Try again.</p>";
         }
-?>
+        ?>
     </tbody>
     </table>
 
