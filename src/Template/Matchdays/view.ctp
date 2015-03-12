@@ -38,8 +38,8 @@
         <?php foreach ($matchday->matches as $matches): ?>
         <tr>
             <td><?= h($matches->id) ?></td>
-            <td><?= h($matches->home_team) ?></td>
-            <td><?= h($matches->away_team) ?></td>
+            <td><?= h($matches->home_team_id) ?></td>
+            <td><?= h($matches->away_team_id) ?></td>
             <td><?= h($matches->stadium_id) ?></td>
             <td><?= h($matches->matchday_id) ?></td>
             <td><?= h($matches->created) ?></td>
