@@ -84,7 +84,7 @@ class MatchesController extends AppController
         }
         $stadia = $this->Matches->Stadia->find('list');
         $matchdays = $this->Matches->Matchdays->find('list');
-        $teams = $this->Matches->Teams->find('list');
+        $teams = $this->Matches->HomeTeams->find('list');
         $this->set(compact('match', 'stadia', 'matchdays', 'teams'));
         $this->set('_serialize', ['match']);
     }
@@ -99,7 +99,7 @@ class MatchesController extends AppController
     public function edit($id = null)
     {
         $match = $this->Matches->get($id, [
-            'contain' => ['Teams']
+            'contain' => ['HomeTeams', 'AwayTeams']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $match = $this->Matches->patchEntity($match, $this->request->data);
@@ -110,9 +110,9 @@ class MatchesController extends AppController
                 $this->Flash->error('The match could not be saved. Please, try again.');
             }
         }
-        $stadia = $this->Matches->Stadia->find('list', ['limit' => 200]);
-        $matchdays = $this->Matches->Matchdays->find('list', ['limit' => 200]);
-        $teams = $this->Matches->Teams->find('list', ['limit' => 200]);
+        $stadia = $this->Matches->Stadia->find('list');
+        $matchdays = $this->Matches->Matchdays->find('list');
+        $teams = $this->Matches->HomeTeams->find('list');
         $this->set(compact('match', 'stadia', 'matchdays', 'teams'));
         $this->set('_serialize', ['match']);
     }

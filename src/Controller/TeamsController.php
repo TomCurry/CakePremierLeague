@@ -82,7 +82,7 @@ class TeamsController extends AppController
             }
         }
         $clubs = $this->Teams->Clubs->find('list'); 
-        $matches = $this->Teams->Matches->find('list');
+        //$matches = $this->Teams->Matches->find('list');
         $this->set(compact('team', 'clubs', 'matches'));
     }
 
@@ -96,7 +96,7 @@ class TeamsController extends AppController
     public function edit($id = null)
     {
         $team = $this->Teams->get($id, [
-            'contain' => ['Players', 'Matches']
+            'contain' => ['Players', 'HomeMatches', 'AwayMatches']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $team = $this->Teams->patchEntity($team, $this->request->data);
@@ -109,7 +109,7 @@ class TeamsController extends AppController
         }
         $clubs = $this->Teams->Clubs->find('list', ['limit' => 200]);
         $players = $this->Teams->Players->find('list', ['limit' => 200]);
-        $matches = $this->Teams->Matches->find('list', ['limit' => 200]);
+        //$matches = $this->Teams->Matches->find('list', ['limit' => 200]);
         $this->set(compact('team', 'clubs', 'players', 'matches'));
         $this->set('_serialize', ['team']);
     }
