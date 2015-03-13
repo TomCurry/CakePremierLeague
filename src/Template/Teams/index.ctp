@@ -25,7 +25,7 @@
             <td>
                 <?= $team->has('club') ? $this->Html->link($team->club->full_name, ['controller' => 'Clubs', 'action' => 'view', $team->club->id]) : '' ?>
             </td>
-            <td><?= h($team->name) ?></td>
+            <td><?= h($team->team_club) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $team->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $team->id]) ?>

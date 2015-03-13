@@ -24,6 +24,13 @@ class Match extends Entity
         'results' => true,
         'teams' => true,
     ];
-
+    
+    protected function _getHomeClub() {
+        return $this->_properties['home_team']['club_id'] . ' - ' . $this->_properties['home_team']['name'];
+    }
+    
+    protected function _getAwayClub() {
+        return $this->_properties['away_team']['club_id'] . ' - ' . $this->_properties['away_team']['name'];
+    }    
     
 }

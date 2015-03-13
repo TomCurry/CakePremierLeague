@@ -23,4 +23,7 @@ class Team extends Entity
         'name' => true
     ];
     
+    protected function _getTeamClub() {
+        return $this->_properties['club']['abbreviation'] . ' - ' . $this->_properties['name'];
+    }    
 }

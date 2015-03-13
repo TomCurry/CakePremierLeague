@@ -10,7 +10,6 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('match_id') ?></th>
             <th><?= $this->Paginator->sort('home_score') ?></th>
             <th><?= $this->Paginator->sort('away_score') ?></th>
@@ -23,7 +22,6 @@
     <tbody>
     <?php foreach ($results as $result): ?>
         <tr>
-            <td><?= $this->Number->format($result->id) ?></td>
             <td>
                 <?= $result->has('match') ? $this->Html->link($result->match->id, ['controller' => 'Matches', 'action' => 'view', $result->match->id]) : '' ?>
             </td>
