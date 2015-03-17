@@ -22,8 +22,12 @@ class MatchesController extends AppController
             'contain' => [
                 'Stadia',
                 'Matchdays',
-                'HomeTeams',
-                'AwayTeams'
+                'HomeTeams' => [
+                    'Clubs'
+                ],
+                'AwayTeams' => [
+                    'Clubs'
+                ]
             ]
         ];
         $this->set('matches', $this->paginate($this->Matches));
