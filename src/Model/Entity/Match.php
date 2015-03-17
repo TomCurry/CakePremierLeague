@@ -22,7 +22,7 @@ class Match extends Entity
         'stadia' => true,
         'matchday' => true,
         'results' => true,
-        'teams' => true,
+        'teams' => true
     ];
     
     protected function _getHomeClub() {

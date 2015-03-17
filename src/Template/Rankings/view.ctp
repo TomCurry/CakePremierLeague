@@ -18,7 +18,7 @@
             <h6 class="subheader"><?= __('League') ?></h6>
             <p><?= $ranking->has('league') ? $this->Html->link($ranking->league->name, ['controller' => 'Leagues', 'action' => 'view', $ranking->league->id]) : '' ?></p>
             <h6 class="subheader"><?= __('Club') ?></h6>
-            <p><?= $ranking->has('club') ? $this->Html->link($ranking->club->id, ['controller' => 'Clubs', 'action' => 'view', $ranking->club->id]) : '' ?></p>
+            <p><?= $ranking->has('club') ? $this->Html->link($ranking->club->full_name, ['controller' => 'Clubs', 'action' => 'view', $ranking->club->id]) : '' ?></p>
         </div>
         <div class="large-2 columns numbers end">
             <h6 class="subheader"><?= __('Id') ?></h6>

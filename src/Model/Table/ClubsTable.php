@@ -50,7 +50,6 @@ class ClubsTable extends Table
         $this->hasMany('Teams', [
             'foreignKey' => 'club_id'
         ]);
-        
     }
 
     /**
@@ -73,8 +72,6 @@ class ClubsTable extends Table
             ->add('founded', 'valid', ['rule' => 'numeric'])
             ->requirePresence('founded', 'create')
             ->notEmpty('founded')
-            ->requirePresence('crest_image', 'create')
-            ->notEmpty('crest_image')
             ->requirePresence('site', 'create')
             ->notEmpty('site')
             ->add('manager_id', 'valid', ['rule' => 'numeric'])

@@ -73,7 +73,7 @@
             <td><?= h($players->id) ?></td>
             <td><?= h($players->first_name) ?></td>
             <td><?= h($players->last_name) ?></td>
-            <td><?= h($players->birth) ?></td>
+            <td><?= h($players->birth->format('d-M-Y')) ?></td>
             <td><?= h($players->country) ?></td>
             <td><?= h($players->position) ?></td>
             <td><?= h($players->squad_number) ?></td>
@@ -156,14 +156,12 @@
         <tr>
             <th><?= __('Id') ?></th>
             <th><?= __('Club Id') ?></th>
-            <th><?= __('Player Id') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
         <?php foreach ($club->teams as $teams): ?>
         <tr>
             <td><?= h($teams->id) ?></td>
             <td><?= h($teams->club_id) ?></td>
-            <td><?= h($teams->player_id) ?></td>
 
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['controller' => 'Teams', 'action' => 'view', $teams->id]) ?>
