@@ -15,11 +15,7 @@
         <?php
             echo $this->Form->input('first_name');
             echo $this->Form->input('last_name');
-            echo $this->Form->input('birth', [
-                'label' => 'Date of birth',
-                'minYear' => 1900,
-                'maxYear' =>  date('Y')
-            ]);
+            echo $this->Form->input('birth');
             echo $this->Form->input('country');
             echo $this->Form->input('position');
             echo $this->Form->input('squad_number');

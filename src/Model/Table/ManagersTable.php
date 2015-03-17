@@ -45,7 +45,7 @@ class ManagersTable extends Table
             ->notEmpty('first_name')
             ->requirePresence('last_name', 'create')
             ->notEmpty('last_name')
-            ->add('appointed', 'valid', ['rule' => 'datetime'])
+            ->add('appointed', 'valid', ['rule' => 'date'])
             ->requirePresence('appointed', 'create')
             ->notEmpty('appointed');
 

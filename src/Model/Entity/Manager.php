@@ -17,7 +17,7 @@ class Manager extends Entity
     protected $_accessible = [
         'first_name' => true,
         'last_name' => true,
-        'birth' => true,
+        'appointed' => true,
         'clubs' => true,
     ];
     
