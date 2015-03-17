@@ -22,7 +22,8 @@ class Match extends Entity
         'stadia' => true,
         'matchday' => true,
         'results' => true,
-        'teams' => true
+        'teams' => true,
+        'clubs' => true
     ];
     
     protected function _getHomeClub() {
@@ -32,5 +33,9 @@ class Match extends Entity
     protected function _getAwayClub() {
         return $this->_properties['away_team']['club']['abbreviation'] . ' - ' . $this->_properties['away_team']['name'];
     }    
+    
+    protected function _getMatchTitle() {
+        $this->_getHomeClub . ' v ' . $this->_getAwayClub;
+    }
     
 }

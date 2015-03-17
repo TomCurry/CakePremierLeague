@@ -75,7 +75,7 @@ class MatchesController extends AppController
      * @return void Redirects on successful add, renders view otherwise.
      */
     public function add()
-    {
+    {   
         $match = $this->Matches->newEntity();
         if ($this->request->is('post')) {
             $match = $this->Matches->patchEntity($match, $this->request->data);
@@ -89,7 +89,8 @@ class MatchesController extends AppController
         $stadia = $this->Matches->Stadia->find('list');
         $matchdays = $this->Matches->Matchdays->find('list');
         $teams = $this->Matches->HomeTeams->find('list');
-        $this->set(compact('match', 'stadia', 'matchdays', 'teams'));
+        $clubs = $this->Matches->HomeTeams->Clubs->find('all');
+        $this->set(compact('match', 'stadia', 'matchdays', 'teams', 'clubs'));
         $this->set('_serialize', ['match']);
     }
 

@@ -14,8 +14,6 @@
             <th><?= $this->Paginator->sort('home_score') ?></th>
             <th><?= $this->Paginator->sort('away_score') ?></th>
             <th><?= $this->Paginator->sort('score') ?></th>
-            <th><?= $this->Paginator->sort('created') ?></th>
-            <th><?= $this->Paginator->sort('updated') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
@@ -28,8 +26,7 @@
             <td><?= $this->Number->format($result->home_score) ?></td>
             <td><?= $this->Number->format($result->away_score) ?></td>
             <td><?= h($result->score) ?></td>
-            <td><?= h($result->created) ?></td>
-            <td><?= h($result->updated) ?></td>
+           
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $result->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $result->id]) ?>
