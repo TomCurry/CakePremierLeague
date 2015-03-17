@@ -31,7 +31,7 @@
             echo $this->Form->input('founded');
             echo $this->Form->input('crest_image', ['type' => 'file']);
             echo $this->Form->input('site');
-            echo $this->Form->input('manager_id', ['options' => $managers]);
+            echo $this->Form->input('manager_id', ['options' => $managers, 'empty' => 'No manager']);
             echo $this->Form->input('stadium_id', ['options' => $stadia]);
         ?>
     </fieldset>

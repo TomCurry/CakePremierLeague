@@ -69,6 +69,8 @@ class ClubsTable extends Table
             ->notEmpty('nickname')
             ->requirePresence('abbreviation', 'create')
             ->notEmpty('abbreviation')
+            ->requirePresence('crest_image', 'create')
+            ->allowEmpty('crest_image')
             ->add('founded', 'valid', ['rule' => 'numeric'])
             ->requirePresence('founded', 'create')
             ->notEmpty('founded')
