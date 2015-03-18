@@ -25,8 +25,8 @@ class MatchesController extends AppController
                 'HomeTeams' => [
                     'Clubs'
                 ],
-                'AwayTeams' => [
-                    'Clubs'
+                'AwayTeams' => [ 
+                   'Clubs'
                 ]
             ]
         ];
@@ -89,8 +89,7 @@ class MatchesController extends AppController
         $stadia = $this->Matches->Stadia->find('list');
         $matchdays = $this->Matches->Matchdays->find('list');
         $teams = $this->Matches->HomeTeams->find('list');
-        $clubs = $this->Matches->HomeTeams->Clubs->find('all');
-        $this->set(compact('match', 'stadia', 'matchdays', 'teams', 'clubs'));
+        $this->set(compact('match', 'stadia', 'matchdays', 'teams'));
         $this->set('_serialize', ['match']);
     }
 
