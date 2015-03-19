@@ -12,9 +12,9 @@
         <legend><?= __('Add Result') ?></legend>
         <?php
             echo $this->Form->input('match_id', ['options' => $matches]);
-            echo $this->Form->input('home_score');
-            echo $this->Form->input('away_score');
-            echo $this->Form->input('score');
+            echo $this->Form->input('team_id', ['options' => $teams]);
+            echo $this->Form->input('goals');
+            echo $this->Form->input('points');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

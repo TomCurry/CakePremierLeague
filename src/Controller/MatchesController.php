@@ -139,4 +139,12 @@ class MatchesController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function match() {
+        $matches = $this->Matches->find()
+            ->contain([
+                'Results'
+        ]);
+        $this->set('matches', $matches);
+    }
 }

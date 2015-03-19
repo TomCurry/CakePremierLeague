@@ -31,9 +31,6 @@ class MatchesTable extends Table
         $this->belongsTo('Matchdays', [
             'foreignKey' => 'matchday_id'
         ]);
-        $this->belongsTo('Results', [
-            'foreignKey' => 'result_id'
-        ]);
         $this->belongsTo('HomeTeams', [
             'foreignKey' => 'home_team_id',
             'className' => 'App\Model\Table\TeamsTable'
@@ -42,6 +39,11 @@ class MatchesTable extends Table
             'foreignKey' => 'away_team_id',
             'className' => 'App\Model\Table\TeamsTable'
         ]);
+        $this->hasMany('Results', [
+            'foreignKey' => 'team_id',
+            'className' => 'App\Model\Table\ResultsTable'
+        ]);
+        
    }
  
    /**
@@ -56,14 +58,14 @@ class MatchesTable extends Table
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
                 
-            ->add('HomeTeam', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('HomeTeam', 'create')
-            ->notEmpty('HomeTeam')
+            ->add('home_team_id', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('home_team_id', 'create')
+            ->notEmpty('home_team_id')
                 
-            ->add('AwayTeam', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('AwayTeam', 'create')
-            ->notEmpty('AwayTeam')
-            ->add('AwayTeam', 'custom', [
+            ->add('away_team_id', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('away_team_id', 'create')
+            ->notEmpty('away_team_id')
+            ->add('away_team_id', 'custom', [
                 'rule' => function ($value, $context) {
                     return isset($context['data']['home_team_id']) && $context['data']['home_team_id'] != $value;
                 },

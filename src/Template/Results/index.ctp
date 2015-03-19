@@ -11,9 +11,9 @@
     <thead>
         <tr>
             <th><?= $this->Paginator->sort('match_id') ?></th>
-            <th><?= $this->Paginator->sort('home_score') ?></th>
-            <th><?= $this->Paginator->sort('away_score') ?></th>
-            <th><?= $this->Paginator->sort('score') ?></th>
+            <th><?= $this->Paginator->sort('team_id') ?></th>
+            <th><?= $this->Paginator->sort('goals') ?></th>
+            <th><?= $this->Paginator->sort('points') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
@@ -23,9 +23,10 @@
             <td>
                 <?= $result->has('match') ? $this->Html->link($result->match->id, ['controller' => 'Matches', 'action' => 'view', $result->match->id]) : '' ?>
             </td>
-            <td><?= $this->Number->format($result->home_score) ?></td>
-            <td><?= $this->Number->format($result->away_score) ?></td>
-            <td><?= h($result->score) ?></td>
+            <td><?= h($result->team_id) ?></td>
+            <td><?= $this->Number->format($result->goals) ?></td>
+            <td><?= $this->Number->format($result->points) ?></td>
+            
            
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $result->id]) ?>

@@ -22,7 +22,7 @@ class TeamsTable extends Table
     public function initialize(array $config)
     {
         $this->table('teams');
-        $this->displayField('name');
+        $this->displayField('id');
         $this->primaryKey('id');
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id'

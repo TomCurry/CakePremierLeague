@@ -25,9 +25,19 @@ class ResultsTable extends Table
         $this->displayField('id');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
+        $this->hasMany('HomeMatches', [
+            'foriegnKey' => 'home_team_id',
+            'className' => 'App\Model\Table\MatchesTable'
+        ]);
+        $this->hasMany('AwayMatches', [
+            'foriegnKey' => 'away_team_id',
+            'className' => 'App\Model\Table\MatchesTable'
+        ]);
         $this->belongsTo('Matches', [
             'foreignKey' => 'match_id'
         ]);
+
+
     }
 
     /**

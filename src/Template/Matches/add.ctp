@@ -17,8 +17,8 @@
     <fieldset>
         <legend><?= __('Add Match') ?></legend>
         <?php
-            echo $this->Form->input('HomeTeam', ['options' => $teams, 'empty' => 'Select home team']);
-            echo $this->Form->input('AwayTeam', ['options' => $teams, 'empty' => 'Select away team']);
+            echo $this->Form->input('home_team_id', ['options' => $teams, 'empty' => 'Select home team']);
+            echo $this->Form->input('away_team_id', ['options' => $teams, 'empty' => 'Select away team']);
             echo $this->Form->input('stadium_id', ['options' => $stadia, 'empty' => 'Select stadium']);
             echo $this->Form->input('matchday_id', ['options' => $matchdays, 'empty' => 'Select matchday']);
         ?>
