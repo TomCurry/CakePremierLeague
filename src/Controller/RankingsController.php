@@ -109,4 +109,16 @@ class RankingsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
+
+    public function homepage()
+    {
+        $query = $this->Rankings->find('all')
+            ->contain(['Leagues', 'Clubs']);
+
+        $rankings = $query->all();
+
+        $this->set('rankings', $rankings);
+
+    }
 }
