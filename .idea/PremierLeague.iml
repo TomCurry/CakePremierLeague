@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/tests/test_app" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/psr/log" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/debug_kit/src" isTestSource="false" packagePrefix="DebugKit" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/bake/tests/comparisons" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/tests/test_app/Plugin/TestPluginTwo/src" isTestSource="false" packagePrefix="TestPluginTwo" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/d11wtq" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/d11wtq/boris/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/aura/installer-default/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/aura/intl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/aura/intl/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/migrations/src" isTestSource="false" packagePrefix="Migrations" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/src" isTestSource="false" packagePrefix="Cake" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/robmorgan/phinx/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/nesbot/carbon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/debug_kit/tests/test_app/Plugin/DebugkitTestPlugin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/bake/tests/test_app/Plugin/BakeTest/src" isTestSource="false" packagePrefix="BakeTest" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/robmorgan/phinx/tests" isTestSource="true" packagePrefix="Test" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/imagine/imagine/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/imagine/imagine/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/davidyell/proffer/src" isTestSource="false" packagePrefix="Proffer" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/symfony/config" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/symfony/console" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/bake/tests/comparisons/Plugin/SimpleExample/src" isTestSource="false" packagePrefix="SimpleExample" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/bake/src" isTestSource="false" packagePrefix="Bake" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/mobiledetect/mobiledetectlib/namespaced" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/tests/test_app/Plugin/TestPlugin/src" isTestSource="false" packagePrefix="TestPlugin" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/tests/test_app/Plugin" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -14,6 +14,8 @@
  */
 namespace App\Controller;
 
+use App\Model\Entity\Ranking;
+use App\Model\Table\RankingsTable;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
@@ -62,4 +64,5 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
 }
