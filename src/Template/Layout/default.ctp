@@ -61,6 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php echo $this->Html->script([
         'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
         'common',
+        'bootstrap.min.js',
     ]); ?>
 </body>
 </html>

@@ -1,5 +1,5 @@
+<h2>Premier League Table 2014/2015</h>
 <div class="rankings home">
-    <h1>Premier League Table 2014/2015</h1>
     <table cellpadding="0" cellspacing="0">
         <thead>
         <tr>
